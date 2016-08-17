@@ -1,0 +1,83 @@
+databaseChangeLog:
+  -  changeSet:
+      id: 1
+      author: 212393921
+      changes:
+        -  createTable:
+              tableName: watch_list
+              columns:
+                -  column:
+                    name: id
+                    type: int
+                    autoIncrement: true
+                    constraints:
+                      primaryKey: true
+                      nullable: false
+                -  column:
+                    name: name
+                    type: varchar(255)
+                    constraints:
+                      nullable: false
+                -  column:
+                    name: symbols
+                    type: varchar(500)
+                    constraints:
+                      nullable: false
+  -  changeSet:
+        id: 2
+        author: 212393921
+        changes:
+          -  addColumn:
+                tableName: watch_list
+                columns:
+                  -  column:
+                      name: interval
+                      type: int
+                      constraints:
+                        nullable: false
+                  -  column:
+                      name: alerted
+                      type: boolean
+                      constraints:
+                        nullable: false
+                        default: false
+                  -  column:
+                      name: alert_price
+                      type: float
+                      constraints:
+                        nullable: false
+  -  changeSet:
+          id: 3
+          author: 212393921
+          changes:
+            -  dropColumn:
+                  tableName: watch_list
+                  columnName: interval
+            -  addColumn:
+                  tableName: watch_list
+                  columns:
+                    -  column:
+                        name: frequency
+                        type: int
+                        constraints:
+                          nullable: false
+  -  changeSet:
+            id: 4
+            author: 212393921
+            changes:
+              -  addColumn:
+                    tableName: watch_list
+                    columns:
+                      -  column:
+                          name: next_execution_date
+                          type: date
+                          constraints:
+                            nullable: true
+  -  changeSet:
+             id: 5
+             author: 212393921
+             changes:
+               -  modifyDataType:
+                     tableName: watch_list
+                     columnName: next_execution_date
+                     newDataType: datetime

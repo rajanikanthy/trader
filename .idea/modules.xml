@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../akka/akka-tutorial-first-java/akka-tutorial-first-java.iml" filepath="$PROJECT_DIR$/../akka/akka-tutorial-first-java/akka-tutorial-first-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/trader.iml" filepath="$PROJECT_DIR$/.idea/modules/trader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/trader_main.iml" filepath="$PROJECT_DIR$/.idea/modules/trader_main.iml" group="trader" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/trader_test.iml" filepath="$PROJECT_DIR$/.idea/modules/trader_test.iml" group="trader" />
+    </modules>
+  </component>
+</project>
